@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/CODE/Git/TestNG_DEMO/src/main/java">
+        <classes>
+            <class name="test01_pkg.test_demo_01">
+                <methods>
+                    <include name="testDemo01_01"/>
+                    <include name="testDemo01_02"/>
+                </methods>
+            </class>
+            <class name="test02_pkg.test_demo_02">
+                <methods>
+                    <include name="testDemo02_01"/>
+                    <include name="testDemo02_02"/>
+                </methods>
+            </class>
+            <class name="test02_pkg.test_demo_03">
+                <methods>
+                    <include name="testDemo03_01"/>
+                    <include name="testDemo03_02"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
