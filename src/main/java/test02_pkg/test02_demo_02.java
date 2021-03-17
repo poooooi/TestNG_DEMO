@@ -7,16 +7,16 @@ package test02_pkg; /**
 
 import org.testng.annotations.Test;
 
-public class test_demo_02 {
+public class test02_demo_02 {
 
     @Test
-    public void testDemo02_01(){
+    public void testDemo02_02_HelloWorld(){
         System.out.println("testDemo02 - HelloWorld");
     }
 
     @Test
-    public void testDemo02_02(){
-        System.out.println("testDemo02 - HelloWorld");
+    public void testDemo02_02_HelloTestNG(){
+        System.out.println("testDemo02 - HelloTestNG");
     }
 }
 
