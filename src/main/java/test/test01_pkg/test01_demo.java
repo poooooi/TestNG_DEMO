@@ -1,4 +1,4 @@
-package test01_pkg; /**
+package test.test01_pkg; /**
  * @program: TestNG_DEMO
  * @description:
  * @author: poooooi

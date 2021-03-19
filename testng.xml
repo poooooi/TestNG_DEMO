@@ -3,19 +3,19 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="D:/CODE/Git/TestNG_DEMO">
         <classes>
-            <class name="test01_pkg.test01_demo">
+            <class name="test.test01_pkg.test01_demo">
                 <methods>
                     <include name="test01_demo_HelloWorld"/>
                     <include name="test01_demo_HelloTestNG"/>
                 </methods>
             </class>
-            <class name="test02_pkg.test02_demo_01">
+            <class name="test.test02_pkg.test02_demo_01">
                 <methods>
                     <include name="testDemo02_01_HelloWorld"/>
                     <include name="testDemo02_01_HelloTestNG"/>
                 </methods>
             </class>
-            <class name="test02_pkg.test02_demo_02">
+            <class name="test.test02_pkg.test02_demo_02">
                 <methods>
                     <include name="testDemo02_02_HelloWorld"/>
                     <include name="testDemo02_02_HelloTestNG"/>
