@@ -8,6 +8,7 @@ import utils.HttpUtil;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import static config.envParam.*;
 
 /**
  * @program: TestNG_DEMO
@@ -18,7 +19,6 @@ import java.util.Map;
 
 
 public class test03_demo_01 {
-    private String URL = "https://accounts.douban.com/j/mobile/login/basic";
 
     @Test
     public void Login() {
@@ -39,7 +39,7 @@ public class test03_demo_01 {
             System.out.print(object);
         }
 
-        System.out.println("登录结果:"+HttpUtil.doPostByJson(URL,postJson,postHeader));
+        System.out.println("登录结果:"+HttpUtil.doPostByJson(testURL,postJson,postHeader));
     }
 
 }
