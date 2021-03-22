@@ -1,6 +1,6 @@
-package test.test01_pkg; /**
+package test.test01_xml; /**
  * @program: TestNG_DEMO
- * @description:
+ * @description: 通过testng.xml文件实现testNG
  * @author: poooooi
  * @create: 2021-03-15 15:27
  **/

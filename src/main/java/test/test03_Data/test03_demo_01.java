@@ -1,45 +1,37 @@
 package test.test03_Data;
 
-
-import org.apache.http.message.BasicNameValuePair;
+import jxl.read.biff.BiffException;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.HttpUtil;
+import utils.ExcelUtil;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
-import static config.envParam.*;
 
 /**
  * @program: TestNG_DEMO
- * @description: 实现数据驱动
+ * @description: 实现数据驱动，读取Excel
  * @author: poooooi
- * @create: 2021-03-17 20:37
+ * @create: 2021-03-21 22:49
  **/
 
-
 public class test03_demo_01 {
+    @DataProvider(name = "num")
+    public Object[][] Numbers() throws BiffException, IOException {
+        ExcelUtil e = new ExcelUtil("testdata", "calculator");
+        return e.getExcelData();
+    }
 
-    @Test
-    public void Login() {
-        Map<String, String> postHeader = new HashMap<>();
-        postHeader.put("content-type", "application/json;charset=UTF-8");
+    @Test(dataProvider = "num")
+    public void testAdd(HashMap<String, String> data) {
+        System.out.println(data.toString());
+        float num1 = Float.parseFloat(data.get("num1"));
+        float num2 = Float.parseFloat(data.get("num2"));
+        float expectedResult = Float.parseFloat(data.get("result"));
 
-        Map<String, String> form = new HashMap<>();
-        form.put("ck", "");
-        form.put("remember", "true");
-        form.put("name", "182XXX1234");
-        form.put("password", "123456");
-
-        String postJson = "{\"ck\":,\"remember\":false,\"name\":\"182XXX1234\",\"password\":\"123456\"}";
-
-        ArrayList<BasicNameValuePair> list = new ArrayList<>();
-        form.forEach((key, value) -> list.add(new BasicNameValuePair(String.valueOf(key), String.valueOf(value))));
-        for (Object object : list) {
-            System.out.print(object);
-        }
-
-        System.out.println("登录结果:"+HttpUtil.doPostByJson(testURL,postJson,postHeader));
+        System.out.println("num1:" + num1);
+        System.out.println("num2:" + num2);
+        System.out.println("expectedResult:" + expectedResult);
     }
 
 }
