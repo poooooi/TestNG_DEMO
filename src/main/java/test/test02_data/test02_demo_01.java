@@ -1,4 +1,4 @@
-package test.test03_Data;
+package test.test02_data;
 
 import jxl.read.biff.BiffException;
 import org.testng.annotations.DataProvider;
@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @create: 2021-03-21 22:49
  **/
 
-public class test03_demo_01 {
+public class test02_demo_01 {
     @DataProvider(name = "num")
     public Object[][] Numbers() throws BiffException, IOException {
         ExcelUtil e = new ExcelUtil("testdata", "calculator");
